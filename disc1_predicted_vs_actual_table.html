@@ -1,0 +1,45 @@
+<h2 class="sr-only">Table comparing predicted DISC1 knockout phenotypes against actual IMPC-recorded phenotypes across eight physiological systems</h2>
+<div style="overflow-x:auto">
+<table style="width:100%;border-collapse:collapse;font-size:14px">
+  <thead>
+    <tr style="border-bottom:1px solid var(--border-strong)">
+      <th style="text-align:left;padding:10px 12px;color:var(--text-primary);font-weight:500">System / process</th>
+      <th style="text-align:left;padding:10px 12px;color:var(--text-primary);font-weight:500">Predicted (Stage 5)</th>
+      <th style="text-align:left;padding:10px 12px;color:var(--text-primary);font-weight:500">Actual (IMPC, Stage 6)</th>
+      <th style="text-align:center;padding:10px 12px;color:var(--text-primary);font-weight:500">Match</th>
+    </tr>
+  </thead>
+  <tbody id="rows"></tbody>
+</table>
+</div>
+<script>
+const data = [
+  ["Nervous system function", "Yes — strong signal (telencephalon dev., neuron differentiation)", "Significantly impacted", true],
+  ["Behavior / neurological", "Yes — via cAMP and dopamine signaling terms", "Significantly impacted", true],
+  ["Vision / eye", "Not predicted", "Significantly impacted", false],
+  ["Immune system", "Not predicted", "Significantly impacted", false],
+  ["Hematopoietic system", "Not predicted", "Significantly impacted", false],
+  ["Renal / urinary system", "Not predicted", "Significantly impacted", false],
+  ["Cardiovascular system", "Not predicted", "Significantly impacted", false],
+  ["Growth / size / body region", "Not predicted", "Significantly impacted", false],
+];
+const rowsEl = document.getElementById('rows');
+data.forEach((r, i) => {
+  const tr = document.createElement('tr');
+  tr.style.borderBottom = '1px solid var(--border)';
+  if (i % 2 === 1) tr.style.background = 'var(--surface-1)';
+  const badge = r[3]
+    ? '<span style="display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:12px;background:#E1F5EE;color:#04342C;font-weight:500"><i class="ti ti-check" aria-hidden="true" style="font-size:14px"></i>Match</span>'
+    : '<span style="display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:12px;background:#F1EFE8;color:#2C2C2A;font-weight:500"><i class="ti ti-x" aria-hidden="true" style="font-size:14px"></i>Missed</span>';
+  tr.innerHTML = `
+    <td style="padding:10px 12px;color:var(--text-primary);font-weight:500">${r[0]}</td>
+    <td style="padding:10px 12px;color:var(--text-secondary)">${r[1]}</td>
+    <td style="padding:10px 12px;color:var(--text-secondary)">${r[2]}</td>
+    <td style="padding:10px 12px;text-align:center">${badge}</td>
+  `;
+  rowsEl.appendChild(tr);
+});
+</script>
+<div style="margin-top:14px;padding:10px 14px;border-radius:8px;background:var(--surface-1);font-size:13px;color:var(--text-secondary)">
+  2 of 8 significantly-impacted systems correctly anticipated by the network / GO-based prediction — both were the neurologically relevant ones. The remaining 6 reflect pleiotropic effects a protein-interaction network cannot fully anticipate.
+</div>

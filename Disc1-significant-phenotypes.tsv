@@ -1,0 +1,10 @@
+Phenotype	Allele	Zygosity	Sex	Life stage	Procedure	Parameter	Phenotyping center	Most significant P-Value	Effect Size
+cataract	Disc1<em1(IMPC)Mbp>	homozygote	male	Early adult	Eye Morphology	Lens Opacity	UC Davis	0.0000227638099255594	-
+abnormal vitreous body morphology	Disc1<em1(IMPC)Mbp>	homozygote	male	Early adult	Eye Morphology	Vitreous	UC Davis	0.0000220196543377565	-
+increased prepulse inhibition	Disc1<em1(IMPC)Mbp>	homozygote	not_considered	Early adult	Acoustic Startle and Pre-pulse Inhibition (PPI)	% Pre-pulse inhibition - PPI1	UC Davis	0.0000706049828625356	19.2079211997569
+abnormal heart morphology	Disc1<em1(IMPC)Mbp>	homozygote	male	Early adult	Gross Pathology and Tissue Collection	Heart	UC Davis	0	1
+hyperactivity	Disc1<em1(IMPC)Mbp>	homozygote	female	Early adult	Open Field	Distance travelled - total	UC Davis	5.86873396464488e-8	2570.64372186287
+abnormal spleen morphology	Disc1<em1(IMPC)Mbp>	homozygote	male	Early adult	Gross Pathology and Tissue Collection	Spleen	UC Davis	0	1
+small kidney	Disc1<em1(IMPC)Mbp>	homozygote	female	Early adult	Gross Pathology and Tissue Collection	Kidney	UC Davis	0	1
+abnormal kidney morphology	Disc1<em1(IMPC)Mbp>	homozygote	female	Early adult	Gross Pathology and Tissue Collection	Kidney	UC Davis	0	1
+enlarged heart	Disc1<em1(IMPC)Mbp>	homozygote	male	Early adult	Gross Pathology and Tissue Collection	Heart	UC Davis	0	1
